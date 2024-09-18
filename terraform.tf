@@ -4,6 +4,13 @@
 # Terraform configuration
 
 terraform {
+  cloud {
+    organization = "amurthy-tfc-org"
+    workspaces {
+      name = "terraform-module-create"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
